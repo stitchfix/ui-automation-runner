@@ -32,7 +32,7 @@ simulator_iPhone5s_iOS7_1="iPhone 5s (iOS7.1)"
 # You may choose to keep this app specific script co-located with your app, and your copy of the
 # ui_automation_runner script in some other more generic location. Whatever you choose, that needs to be reflected
 # as an absolute or relative path to the current file:
-AUTOMATION_RUNNER_SCRIPT_PATH="${XCS_SOURCE_DIR/iOSApp/ui-automation-runner/ui_automation_runner.sh"
+AUTOMATION_RUNNER_SCRIPT_PATH="${XCS_SOURCE_DIR/iOSApp/StitchFixTests/ui_automation_runner.sh"
 
 
 # ===== YOUR APP AND TEST FILE SETTINGS =====
