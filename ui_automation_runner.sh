@@ -48,7 +48,7 @@
 
 # ===== CONFIGURABLE OPTIONS =====
 # Set this to true if you want debug output
-DEBUG_MODE_ENABLED=0 # Set to 1 for true (debugging enabled), or 0 for false (debugging statements suppressed).
+DEBUG_MODE_ENABLED=1 # Set to 1 for true (debugging enabled), or 0 for false (debugging statements suppressed).
 
 
 
@@ -160,18 +160,20 @@ _find_app_path_navigating_changing_guid() {
     local test_app_name=$2
 
     # Does the app name provided already have a '.app' extension?
-    if [[ ${test_app_name} =~ ".app" ]]; then
-        # YES. This extension is already present, so nothing more to do.
-        if [ ${DEBUG_MODE_ENABLED} -eq 1 ]; then
-            echo "_find_app_path_navigating_changing_guid(): App name already contains .app extension"
-        fi
-    else
-        # NO. We need to add it now, so that we only come up with one match when searching next.
-        if [ ${DEBUG_MODE_ENABLED} -eq 1 ]; then
-            echo "_find_app_path_navigating_changing_guid(): Appending .app extension to App Name"
-        fi
-        test_app_name="$test_app_name.app"
-    fi
+# if [[ ${test_app_name} =~ ".app" ]]; then
+
+# YES. This extension is already present, so nothing more to do.
+
+#if [ ${DEBUG_MODE_ENABLED} -eq 1 ]; then
+#           echo "_find_app_path_navigating_changing_guid(): App name already contains .app extension"
+#       fi
+#   else
+#       # NO. We need to add it now, so that we only come up with one match when searching next.
+#       if [ ${DEBUG_MODE_ENABLED} -eq 1 ]; then
+#           echo "_find_app_path_navigating_changing_guid(): Appending .app extension to App Name"
+#       fi
+#       test_app_name="$test_app_name.app"
+#   fi
 
     cd ${specific_simulator_path}
 
